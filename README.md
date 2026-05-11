@@ -10,10 +10,6 @@ Adoption signals — active users, report views, refresh reliability, certified 
 
 It does **not** call the Microsoft Graph or Power BI Admin APIs. Instead, you load adoption data into the Power BI model (audit logs, usage metrics, exported CSVs, Fabric monitoring data) and bind measures to the visual.
 
-## Screenshots
-
-> _Placeholder — add screenshots before publishing._
-
 ## Data fields
 
 | Role | Kind |

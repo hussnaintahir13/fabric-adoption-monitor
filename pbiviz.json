@@ -1,0 +1,19 @@
+{
+  "visual": {
+    "name": "fabricAdoptionMonitor",
+    "displayName": "Fabric Adoption Monitor",
+    "guid": "fabricAdoptionMonitor9D5C7E134B6A4E70BC9C0A1D5F2D7A33",
+    "visualClassName": "Visual",
+    "version": "1.0.0",
+    "description": "Visualise Power BI / Fabric adoption and governance health: active users, report views, refresh failures, certified datasets, adoption score and suggested actions.",
+    "supportUrl": "https://github.com/hussnaintahir13/fabric-adoption-monitor/issues",
+    "gitHubUrl": "https://github.com/hussnaintahir13/fabric-adoption-monitor"
+  },
+  "apiVersion": "5.11.0",
+  "author": { "name": "Syed Hussnain", "email": "maintainers@example.com" },
+  "assets": { "icon": "assets/icon.png" },
+  "externalJS": [],
+  "style": "style/visual.less",
+  "capabilities": "capabilities.json",
+  "stringResources": []
+}

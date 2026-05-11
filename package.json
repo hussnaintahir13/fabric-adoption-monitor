@@ -1,0 +1,24 @@
+{
+  "name": "fabric-adoption-monitor",
+  "version": "1.0.0",
+  "description": "Fabric Adoption Monitor — a Power BI custom visual that summarises adoption, usage, governance health and risk for Power BI / Microsoft Fabric tenants.",
+  "keywords": ["powerbi", "fabric", "adoption", "governance"],
+  "scripts": {
+    "pbiviz": "pbiviz",
+    "start": "pbiviz start",
+    "package": "pbiviz package",
+    "lint": "tsc --noEmit"
+  },
+  "author": { "name": "Syed Hussnain", "email": "maintainers@example.com" },
+  "license": "MIT",
+  "dependencies": {
+    "powerbi-visuals-api": "~5.11.0",
+    "powerbi-visuals-utils-formattingmodel": "6.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "less": "^4.2.0",
+    "powerbi-visuals-tools": "~5.5.1",
+    "typescript": "^5.4.0"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "dataRoles": [
+    { "displayName": "Active Users", "name": "activeUsers", "kind": "Measure" },
+    { "displayName": "Total Users", "name": "totalUsers", "kind": "Measure" },
+    { "displayName": "Inactive Users", "name": "inactiveUsers", "kind": "Measure" },
+    { "displayName": "Report Views", "name": "reportViews", "kind": "Measure" },
+    { "displayName": "Previous Report Views", "name": "previousReportViews", "kind": "Measure" },
+    { "displayName": "Workspace Count", "name": "workspaceCount", "kind": "Measure" },
+    { "displayName": "Report Count", "name": "reportCount", "kind": "Measure" },
+    { "displayName": "Unused Report Count", "name": "unusedReportCount", "kind": "Measure" },
+    { "displayName": "Refresh Failure Count", "name": "refreshFailureCount", "kind": "Measure" },
+    { "displayName": "Certified Dataset Count", "name": "certifiedDatasetCount", "kind": "Measure" },
+    { "displayName": "Dataset Count", "name": "datasetCount", "kind": "Measure" },
+    { "displayName": "Adoption Score (optional)", "name": "adoptionScore", "kind": "Measure" },
+    { "displayName": "Period Label", "name": "periodLabel", "kind": "Grouping" },
+    { "displayName": "Category", "name": "category", "kind": "Grouping" }
+  ],
+  "dataViewMappings": [
+    {
+      "categorical": {
+        "categories": { "for": { "in": "periodLabel" } },
+        "values": {
+          "select": [
+            { "bind": { "to": "activeUsers" } },
+            { "bind": { "to": "totalUsers" } },
+            { "bind": { "to": "inactiveUsers" } },
+            { "bind": { "to": "reportViews" } },
+            { "bind": { "to": "previousReportViews" } },
+            { "bind": { "to": "workspaceCount" } },
+            { "bind": { "to": "reportCount" } },
+            { "bind": { "to": "unusedReportCount" } },
+            { "bind": { "to": "refreshFailureCount" } },
+            { "bind": { "to": "certifiedDatasetCount" } },
+            { "bind": { "to": "datasetCount" } },
+            { "bind": { "to": "adoptionScore" } }
+          ]
+        }
+      }
+    }
+  ],
+  "objects": {
+    "display": {
+      "properties": {
+        "titleText": { "type": { "text": true } },
+        "showScore": { "type": { "bool": true } },
+        "showKpis": { "type": { "bool": true } },
+        "showGovernance": { "type": { "bool": true } },
+        "showAction": { "type": { "bool": true } },
+        "compactMode": { "type": { "bool": true } },
+        "decimalPlaces": { "type": { "numeric": true } },
+        "numberAbbreviation": {
+          "type": { "enumeration": [
+            { "value": "none", "displayName": "None" },
+            { "value": "km", "displayName": "K / M" }
+          ] }
+        },
+        "tileBorderRadius": { "type": { "numeric": true } },
+        "fontSize": { "type": { "numeric": true } }
+      }
+    },
+    "thresholds": {
+      "properties": {
+        "excellent": { "type": { "numeric": true } },
+        "healthy": { "type": { "numeric": true } },
+        "moderate": { "type": { "numeric": true } },
+        "low": { "type": { "numeric": true } }
+      }
+    },
+    "colors": {
+      "properties": {
+        "backgroundColor": { "type": { "fill": { "solid": { "color": true } } } },
+        "textColor": { "type": { "fill": { "solid": { "color": true } } } },
+        "positiveColor": { "type": { "fill": { "solid": { "color": true } } } },
+        "warningColor": { "type": { "fill": { "solid": { "color": true } } } },
+        "riskColor": { "type": { "fill": { "solid": { "color": true } } } }
+      }
+    }
+  },
+  "supportsHighlight": false,
+  "supportsLandingPage": true,
+  "supportsKeyboardFocus": true,
+  "privileges": []
+}

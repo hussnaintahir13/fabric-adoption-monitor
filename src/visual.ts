@@ -17,7 +17,10 @@ export class Visual implements IVisual {
     private settings: VisualSettings = new VisualSettings();
     private formattingSettingsService: FormattingSettingsService;
 
-    constructor(options: VisualConstructorOptions) {
+    constructor(options?: VisualConstructorOptions) {
+        if (!options) {
+            throw new Error("Fabric Adoption Monitor: VisualConstructorOptions are required.");
+        }
         this.root = options.element;
         this.root.classList.add("fam-root");
         this.formattingSettingsService = new FormattingSettingsService();
@@ -65,7 +68,7 @@ export class Visual implements IVisual {
         const d = this.settings.display;
         const abbr = (d.numberAbbreviation.value.value as NumberAbbreviation) || "km";
 
-        this.root.innerHTML = "";
+        while (this.root.firstChild) this.root.removeChild(this.root.firstChild);
         this.root.style.background = colors.background;
         this.root.style.color = colors.text;
         this.root.style.fontSize = `${d.fontSize.value}px`;
@@ -172,10 +175,12 @@ export class Visual implements IVisual {
         const wrap = document.createElement("div");
         wrap.className = "fam-empty";
         wrap.setAttribute("role", "status");
-        wrap.innerHTML = `
-            <h3>Fabric Adoption Monitor</h3>
-            <p>Bind adoption measures (active users, total users, report views, refresh failures, certified datasets, etc.) to begin.</p>
-        `;
+        const h = document.createElement("h3");
+        h.textContent = "Fabric Adoption Monitor";
+        wrap.appendChild(h);
+        const p = document.createElement("p");
+        p.textContent = "Bind adoption measures (active users, total users, report views, refresh failures, certified datasets, etc.) to begin.";
+        wrap.appendChild(p);
         this.root.appendChild(wrap);
     }
 }

@@ -2,6 +2,10 @@
 
 A Power BI custom visual for BI managers and Microsoft Fabric admins to communicate adoption, usage, engagement and governance health in a single, dashboard-friendly tile.
 
+## Quick install (no build required)
+
+Grab the latest `.pbiviz` from [`release/`](release/) (use **Download raw file** in GitHub) and import via **Visualizations → … → Import a visual from a file** in Power BI Desktop. Full steps in [`release/README.md`](release/README.md).
+
 ## Why it matters
 
 Adoption signals — active users, report views, refresh reliability, certified content — are usually scattered across audit log exports and the Power BI usage metrics dataset. This visual surfaces them as a single 0–100 score, with KPI tiles, a governance risk badge, and a suggested action so admins can act on what they see.
